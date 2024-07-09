@@ -1,0 +1,11 @@
+--------------------Observation In Production URL----------------------------
+
+-> All Test Cases Passed.
+
+
+-------------------Observation In Staging URL-----------------------------
+
+-> Numbers/operators such as 0 & (.) are not working.
+-> When number 5 is clicked 6 is displayed on screen.
+-> Decimal Values are not populating correctly.
+-> This calculator is not stable when doing calculations with more than 4 numbers
