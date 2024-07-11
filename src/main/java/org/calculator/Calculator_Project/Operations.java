@@ -76,7 +76,7 @@ public class Operations extends Base {
 
 					click_custom(DriverFactory.getInstance().getDriver()
 							.findElement(By.xpath("//div[@class='row']/input[@value='" + String.valueOf(ch) + "']"))
-							,"=");
+							,String.valueOf(ch));
 				}
 
 			} else {
