@@ -27,7 +27,7 @@ public class CalculatorTests extends Base{
     /* Test method that handles the calculation for any number of operation */
     
     @Test(dataProvider = "dp")
-    public void calculate(String input) {    	
+    public void calculate(String input) throws InterruptedException {    	
     	
     	String expected = String.valueOf(op.performOperation(input));    	
     	
@@ -45,25 +45,25 @@ public class CalculatorTests extends Base{
 
     @Test(enabled=false)
     
-    public void testAddition() {
+    public void testAddition() throws InterruptedException {
     	op.performOperation("5", "+", "3");
         Assert.assertEquals(getResult(),"8");
     }
 
     @Test(enabled=false)
-    public void testSubtraction() {
+    public void testSubtraction() throws InterruptedException {
     	op.performOperation("9", "-", "4");
         Assert.assertEquals(getResult(),"5");
     }
 
     @Test(enabled=false)
-    public void testMultiplication() {
+    public void testMultiplication() throws InterruptedException {
     	op.performOperation("7", "*", "6");
         Assert.assertEquals( getResult(),"42");
     }
 
     @Test(enabled=false)
-    public void testDivision() {
+    public void testDivision() throws InterruptedException {
     	op.performOperation("8", "/", "2");
         Assert.assertEquals(getResult(), "4");
     }

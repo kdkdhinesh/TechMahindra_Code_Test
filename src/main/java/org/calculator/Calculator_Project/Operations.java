@@ -15,7 +15,7 @@ public class Operations extends Base {
 
 	// Method to do operation with 2 numbers
 
-	public void performOperation(String firstNumber, String operator, String secondNumber) {
+	public void performOperation(String firstNumber, String operator, String secondNumber) throws InterruptedException {
 
 		WebElement firstInput = DriverFactory.getInstance().getDriver()
 				.findElement(By.xpath("//div[@class='row']/input[@value='" + firstNumber + "']"));
@@ -26,27 +26,27 @@ public class Operations extends Base {
 
 		switch (operator) {
 		case "+":
-			DriverFactory.getInstance().getDriver().findElement(add).click();
+			click_custom(DriverFactory.getInstance().getDriver().findElement(add),"+");
 			break;
 		case "-":
-			DriverFactory.getInstance().getDriver().findElement(subtract).click();
+			click_custom(DriverFactory.getInstance().getDriver().findElement(subtract),"-");
 			break;
 		case "*":
-			DriverFactory.getInstance().getDriver().findElement(multiply).click();
+			click_custom(DriverFactory.getInstance().getDriver().findElement(multiply),"x");
 			break;
 		case "/":
-			DriverFactory.getInstance().getDriver().findElement(divide).click();
+			click_custom(DriverFactory.getInstance().getDriver().findElement(divide),"/");
 			break;
 		}
 		secondInput.click();
 
-		DriverFactory.getInstance().getDriver().findElement(equalTo).click();
+		click_custom(DriverFactory.getInstance().getDriver().findElement(equalTo),"=");
 
 	}
 
 	// Method to do operation with more than 2 numbers
 
-	public int performOperation(String input) {
+	public int performOperation(String input) throws InterruptedException  {
 
 		int expectedResult = expectedOutput(input);
 
@@ -59,24 +59,24 @@ public class Operations extends Base {
 
 					switch (String.valueOf(ch)) {
 					case "+":
-						DriverFactory.getInstance().getDriver().findElement(add).click();
+						click_custom(DriverFactory.getInstance().getDriver().findElement(add),"+");
 						break;
 					case "-":
-						DriverFactory.getInstance().getDriver().findElement(subtract).click();
+						click_custom(DriverFactory.getInstance().getDriver().findElement(subtract),"-");
 						break;
 					case "*":
-						DriverFactory.getInstance().getDriver().findElement(multiply).click();
+						click_custom(DriverFactory.getInstance().getDriver().findElement(multiply),"x");
 						break;
 					case "/":
-						DriverFactory.getInstance().getDriver().findElement(divide).click();
+						click_custom(DriverFactory.getInstance().getDriver().findElement(divide),"/");
 						break;
 					}
 
 				} else {
 
-					DriverFactory.getInstance().getDriver()
+					click_custom(DriverFactory.getInstance().getDriver()
 							.findElement(By.xpath("//div[@class='row']/input[@value='" + String.valueOf(ch) + "']"))
-							.click();
+							,"=");
 				}
 
 			} else {
@@ -85,7 +85,17 @@ public class Operations extends Base {
 			}
 
 		}
-		DriverFactory.getInstance().getDriver().findElement(equalTo).click();
+		click_custom(DriverFactory.getInstance().getDriver().findElement(equalTo),"=");
+		
+		try {
+			
+			Thread.sleep(1000);
+			
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+						
+		}
 
 		return expectedResult;
 	}
