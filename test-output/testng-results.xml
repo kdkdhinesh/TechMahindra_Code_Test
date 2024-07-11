@@ -2,35 +2,31 @@
 <testng-results ignored="4" total="8" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-11T12:24:02 IST" name="Default suite" finished-at="2024-07-11T12:24:26 IST" duration-ms="23523">
+  <suite started-at="2024-07-11T23:17:16 IST" name="Default suite" finished-at="2024-07-11T23:17:32 IST" duration-ms="15859">
     <groups>
     </groups>
-    <test started-at="2024-07-11T12:24:02 IST" name="Default test" finished-at="2024-07-11T12:24:26 IST" duration-ms="23523">
+    <test started-at="2024-07-11T23:17:16 IST" name="Default test" finished-at="2024-07-11T23:17:32 IST" duration-ms="15859">
       <class name="org.calculator.Calculator_Project.CalculatorTests">
-        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@74e28667]" started-at="2024-07-11T12:24:03 IST" name="LaunchApplication" finished-at="2024-07-11T12:24:05 IST" duration-ms="2317" status="PASS">
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@4681c175]" started-at="2024-07-11T23:17:16 IST" name="LaunchApplication" finished-at="2024-07-11T23:17:20 IST" duration-ms="3904" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchApplication -->
-        <test-method signature="calculate(java.lang.String)[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@74e28667]" started-at="2024-07-11T12:24:05 IST" name="calculate" data-provider="dp" finished-at="2024-07-11T12:24:07 IST" duration-ms="1874" status="PASS">
+        <test-method signature="calculate(java.lang.String)[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@4681c175]" started-at="2024-07-11T23:17:21 IST" name="calculate" data-provider="dp" finished-at="2024-07-11T23:17:23 IST" duration-ms="1925" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[1+1+4+5-3*4]]>
+                <![CDATA[52+1+4+5-3*4]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- calculate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@74e28667]" started-at="2024-07-11T12:24:07 IST" name="tearDown" finished-at="2024-07-11T12:24:10 IST" duration-ms="2339" status="PASS">
+        <test-method is-config="true" signature="clearField()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@4681c175]" started-at="2024-07-11T23:17:23 IST" name="clearField" finished-at="2024-07-11T23:17:23 IST" duration-ms="84" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@74e28667]" started-at="2024-07-11T12:24:10 IST" name="LaunchApplication" finished-at="2024-07-11T12:24:11 IST" duration-ms="1100" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApplication -->
-        <test-method signature="calculate(java.lang.String)[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@74e28667]" started-at="2024-07-11T12:24:11 IST" name="calculate" data-provider="dp" finished-at="2024-07-11T12:24:12 IST" duration-ms="1547" status="PASS">
+        </test-method> <!-- clearField -->
+        <test-method signature="calculate(java.lang.String)[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@4681c175]" started-at="2024-07-11T23:17:23 IST" name="calculate" data-provider="dp" finished-at="2024-07-11T23:17:24 IST" duration-ms="1508" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,15 +37,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- calculate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@74e28667]" started-at="2024-07-11T12:24:12 IST" name="tearDown" finished-at="2024-07-11T12:24:15 IST" duration-ms="2373" status="PASS">
+        <test-method is-config="true" signature="clearField()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@4681c175]" started-at="2024-07-11T23:17:24 IST" name="clearField" finished-at="2024-07-11T23:17:24 IST" duration-ms="75" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@74e28667]" started-at="2024-07-11T12:24:15 IST" name="LaunchApplication" finished-at="2024-07-11T12:24:16 IST" duration-ms="1197" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApplication -->
-        <test-method signature="calculate(java.lang.String)[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@74e28667]" started-at="2024-07-11T12:24:16 IST" name="calculate" data-provider="dp" finished-at="2024-07-11T12:24:18 IST" duration-ms="2142" status="PASS">
+        </test-method> <!-- clearField -->
+        <test-method signature="calculate(java.lang.String)[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@4681c175]" started-at="2024-07-11T23:17:24 IST" name="calculate" data-provider="dp" finished-at="2024-07-11T23:17:27 IST" duration-ms="2211" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -60,15 +52,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- calculate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@74e28667]" started-at="2024-07-11T12:24:18 IST" name="tearDown" finished-at="2024-07-11T12:24:20 IST" duration-ms="2317" status="PASS">
+        <test-method is-config="true" signature="clearField()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@4681c175]" started-at="2024-07-11T23:17:27 IST" name="clearField" finished-at="2024-07-11T23:17:27 IST" duration-ms="67" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@74e28667]" started-at="2024-07-11T12:24:20 IST" name="LaunchApplication" finished-at="2024-07-11T12:24:21 IST" duration-ms="1079" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApplication -->
-        <test-method signature="calculate(java.lang.String)[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@74e28667]" started-at="2024-07-11T12:24:21 IST" name="calculate" data-provider="dp" finished-at="2024-07-11T12:24:23 IST" duration-ms="1826" status="PASS">
+        </test-method> <!-- clearField -->
+        <test-method signature="calculate(java.lang.String)[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@4681c175]" started-at="2024-07-11T23:17:27 IST" name="calculate" data-provider="dp" finished-at="2024-07-11T23:17:29 IST" duration-ms="1747" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -79,7 +67,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- calculate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@74e28667]" started-at="2024-07-11T12:24:23 IST" name="tearDown" finished-at="2024-07-11T12:24:26 IST" duration-ms="2357" status="PASS">
+        <test-method is-config="true" signature="clearField()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@4681c175]" started-at="2024-07-11T23:17:29 IST" name="clearField" finished-at="2024-07-11T23:17:29 IST" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearField -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.calculator.Calculator_Project.CalculatorTests@4681c175]" started-at="2024-07-11T23:17:29 IST" name="tearDown" finished-at="2024-07-11T23:17:32 IST" duration-ms="3237" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

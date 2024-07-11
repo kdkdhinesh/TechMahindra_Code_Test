@@ -6,12 +6,14 @@ import org.openqa.selenium.support.FindBy;
 
 public class Operations extends Base {
 
-	By divide = By.id("divide");
-	By multiply = By.id("multiply");
-	By subtract = By.id("subtract");
-	By add = By.id("add");
-	By equalTo = By.xpath("//input[@class='double-y']");
-	By clear = By.xpath("//input[@class='double-x']");
+	 By divide = By.id("divide");
+	 By multiply = By.id("multiply");
+	 By subtract = By.id("subtract");
+	 By add = By.id("add");
+	 By equalTo = By.xpath("//input[@class='double-y']");
+	 By clear = By.xpath("//input[@class='double-x']");
+	
+     
 
 	// Method to do operation with 2 numbers
 
