@@ -11,10 +11,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 public class Base extends Actions{
-
+	
+	
 	BrowserFactory bf = new BrowserFactory();
 
-	@BeforeTest
 	public void LaunchApplication() throws Exception {
 
 		DriverFactory.getInstance().setDriver(bf.createBrowserInstance("chrome"));
@@ -26,17 +26,19 @@ public class Base extends Actions{
 		
 		}
 
-	@AfterTest
-	public void tearDown() throws InterruptedException {
+	public void closeBrowserTab() throws InterruptedException {
+		
 		Thread.sleep(2000);
-		DriverFactory.getInstance().closeBrowser();
+
+		DriverFactory.getInstance().getDriver().close();
 	}
 	
 	@AfterMethod
-	public void clearField() throws InterruptedException {
+	public void tearDown() throws InterruptedException {
 		
-		click_custom(DriverFactory.getInstance().getDriver().findElement(By.xpath("//input[@class='double-x']")), "Clear");
-	}
-
+		DriverFactory.getInstance().closeBrowser();
+		
+	}	
+	
 
 }

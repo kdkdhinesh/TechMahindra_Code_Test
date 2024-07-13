@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite data-provider-thread-count="2" name="Failed suite [Parallel Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Parallel Test(failed)">
+<suite parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
       <class name="org.calculator.Calculator_Project.CalculatorTests">
         <methods>
+          <include name="LaunchApplication"/>
           <include name="tearDown"/>
-          <include name="calculate" invocation-numbers="0 1"/>
+          <include name="calculate" invocation-numbers="0 1 2 3"/>
         </methods>
       </class> <!-- org.calculator.Calculator_Project.CalculatorTests -->
     </classes>
-  </test> <!-- Parallel Test(failed) -->
-</suite> <!-- Failed suite [Parallel Suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

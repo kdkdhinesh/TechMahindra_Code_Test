@@ -3,6 +3,7 @@ package org.calculator.Calculator_Project;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class Operations extends Base {
 
@@ -11,7 +12,6 @@ public class Operations extends Base {
 	 By subtract = By.id("subtract");
 	 By add = By.id("add");
 	 By equalTo = By.xpath("//input[@class='double-y']");
-	 By clear = By.xpath("//input[@class='double-x']");
 	
      
 
@@ -28,29 +28,28 @@ public class Operations extends Base {
 
 		switch (operator) {
 		case "+":
-			click_custom(DriverFactory.getInstance().getDriver().findElement(add),"+");
+			click_custom(add,"+");
 			break;
 		case "-":
-			click_custom(DriverFactory.getInstance().getDriver().findElement(subtract),"-");
+			click_custom(subtract,"-");
 			break;
 		case "*":
-			click_custom(DriverFactory.getInstance().getDriver().findElement(multiply),"x");
+			click_custom(multiply,"x");
 			break;
 		case "/":
-			click_custom(DriverFactory.getInstance().getDriver().findElement(divide),"/");
+			click_custom(divide,"/");
 			break;
 		}
 		secondInput.click();
 
-		click_custom(DriverFactory.getInstance().getDriver().findElement(equalTo),"=");
+		click_custom(equalTo,"=");
 
 	}
 
 	// Method to do operation with more than 2 numbers
 
-	public int performOperation(String input) throws InterruptedException  {
+	public void performOperation(String input) throws InterruptedException  {
 
-		int expectedResult = expectedOutput(input);
 
 		for (Character ch : input.toCharArray()) {
 
@@ -61,23 +60,22 @@ public class Operations extends Base {
 
 					switch (String.valueOf(ch)) {
 					case "+":
-						click_custom(DriverFactory.getInstance().getDriver().findElement(add),"+");
+						click_custom(add,"+");
 						break;
 					case "-":
-						click_custom(DriverFactory.getInstance().getDriver().findElement(subtract),"-");
+						click_custom(subtract,"-");
 						break;
 					case "*":
-						click_custom(DriverFactory.getInstance().getDriver().findElement(multiply),"x");
+						click_custom(multiply,"x");
 						break;
 					case "/":
-						click_custom(DriverFactory.getInstance().getDriver().findElement(divide),"/");
+						click_custom(divide,"/");
 						break;
 					}
 
 				} else {
 
-					click_custom(DriverFactory.getInstance().getDriver()
-							.findElement(By.xpath("//div[@class='row']/input[@value='" + String.valueOf(ch) + "']"))
+					click_custom(By.xpath("//div[@class='row']/input[@value='" + String.valueOf(ch) + "']")
 							,String.valueOf(ch));
 				}
 
@@ -87,24 +85,27 @@ public class Operations extends Base {
 			}
 
 		}
-		click_custom(DriverFactory.getInstance().getDriver().findElement(equalTo),"=");
 		
-		try {
-			
-			Thread.sleep(1000);
-			
-		} catch (InterruptedException e) {
-			
-			e.printStackTrace();
-						
-		}
-
-		return expectedResult;
+		click_custom(equalTo,"=");
+		
+		double expectedResult = expectedOutput(input);
+		
+		double actual = Double.parseDouble(getText_custom(DriverFactory.getInstance().getDriver().findElement(displayedValue )));
+    	
+    	try {
+    		
+        Assert.assertEquals(actual , expectedResult);
+        
+    	}catch(Exception e) {
+    		
+    		System.err.print(e);
+    		
+    	}
 	}
 
-	public static int expectedOutput(String expression) {
-		int result = 0;
-		int currentNumber = 0;
+	public static double expectedOutput(String expression) {
+		double result = 0;
+		double currentNumber = 0;
 		char operator = '+';
 
 		for (int i = 0; i < expression.length(); i++) {
