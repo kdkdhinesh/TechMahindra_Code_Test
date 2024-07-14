@@ -6,7 +6,7 @@
       <class name="org.calculator.Calculator_Project.CalculatorTests">
         <methods>
           <include name="tearDown"/>
-          <include name="calculate" invocation-numbers="0 1"/>
+          <include name="calculate" invocation-numbers="0 1 2 3"/>
         </methods>
       </class> <!-- org.calculator.Calculator_Project.CalculatorTests -->
     </classes>

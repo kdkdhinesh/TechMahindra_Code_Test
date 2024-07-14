@@ -9,8 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Actions {
 
-	By displayedValue = By.xpath("//div[@id='display']/div");
-
 	private WebDriverWait wait = null;
 
 	private WebDriverWait getWebDriverWait() {
@@ -21,7 +19,7 @@ public class Actions {
 	public void click_custom(By byLocator, String expectedKey) throws InterruptedException {
 
 		try {
-
+			
 			getWebDriverWait();
 
 			WebElement element = this.wait.until(ExpectedConditions.presenceOfElementLocated(byLocator));

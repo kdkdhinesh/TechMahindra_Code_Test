@@ -7,44 +7,18 @@ import org.testng.Assert;
 
 public class Operations extends Base {
 
+	
+
+	// By locators
+	
 	 By divide = By.id("divide");
 	 By multiply = By.id("multiply");
 	 By subtract = By.id("subtract");
 	 By add = By.id("add");
 	 By equalTo = By.xpath("//input[@class='double-y']");
+	 By displayedValue = By.xpath("//div[@id='display']/div");
 	
      
-
-	// Method to do operation with 2 numbers
-
-	public void performOperation(String firstNumber, String operator, String secondNumber) throws InterruptedException {
-
-		WebElement firstInput = DriverFactory.getInstance().getDriver()
-				.findElement(By.xpath("//div[@class='row']/input[@value='" + firstNumber + "']"));
-		WebElement secondInput = DriverFactory.getInstance().getDriver()
-				.findElement(By.xpath("//div[@class='row']/input[@value='" + secondNumber + "']"));
-
-		firstInput.click();
-
-		switch (operator) {
-		case "+":
-			click_custom(add,"+");
-			break;
-		case "-":
-			click_custom(subtract,"-");
-			break;
-		case "*":
-			click_custom(multiply,"x");
-			break;
-		case "/":
-			click_custom(divide,"/");
-			break;
-		}
-		secondInput.click();
-
-		click_custom(equalTo,"=");
-
-	}
 
 	// Method to do operation with more than 2 numbers
 
@@ -112,9 +86,9 @@ public class Operations extends Base {
 			char ch = expression.charAt(i);
 
 			if (Character.isDigit(ch)) {
+				
 				currentNumber = currentNumber * 10 + (ch - '0');
 			}
-
 			if (!Character.isDigit(ch) && ch != ' ' || i == expression.length() - 1) {
 				switch (operator) {
 				case '+':
