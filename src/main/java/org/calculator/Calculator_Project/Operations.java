@@ -15,37 +15,6 @@ public class Operations extends Base {
 	
      
 
-	// Method to do operation with 2 numbers
-
-	public void performOperation(String firstNumber, String operator, String secondNumber) throws InterruptedException {
-
-		WebElement firstInput = DriverFactory.getInstance().getDriver()
-				.findElement(By.xpath("//div[@class='row']/input[@value='" + firstNumber + "']"));
-		WebElement secondInput = DriverFactory.getInstance().getDriver()
-				.findElement(By.xpath("//div[@class='row']/input[@value='" + secondNumber + "']"));
-
-		firstInput.click();
-
-		switch (operator) {
-		case "+":
-			click_custom(add,"+");
-			break;
-		case "-":
-			click_custom(subtract,"-");
-			break;
-		case "*":
-			click_custom(multiply,"x");
-			break;
-		case "/":
-			click_custom(divide,"/");
-			break;
-		}
-		secondInput.click();
-
-		click_custom(equalTo,"=");
-
-	}
-
 	// Method to do operation with more than 2 numbers
 
 	public void performOperation(String input) throws InterruptedException  {
