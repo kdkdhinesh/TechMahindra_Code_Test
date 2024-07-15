@@ -66,15 +66,8 @@ public class Operations extends Base {
 		
 		double actual = Double.parseDouble(getText_custom(DriverFactory.getInstance().getDriver().findElement(displayedValue )));
     	
-    	try {
-    		
-        Assert.assertEquals(actual , expectedResult);
-        
-    	}catch(Exception e) {
-    		
-    		System.err.print(e);
-    		
-    	}
+		Assert.assertEquals(actual , expectedResult);
+  
 	}
 
 	public static double expectedOutput(String expression) {
